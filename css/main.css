@@ -254,7 +254,7 @@ input {
 
 #section7 .sectionContent {
     height: 100%;
-    grid-template-rows: 40px auto;
+    grid-template-rows: 50px auto;
     color: white;
     justify-items: center;
 }
