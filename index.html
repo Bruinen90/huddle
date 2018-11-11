@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Huddle - Build your community for free!</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700" rel="stylesheet">
+        <!-- Ionic Icons -->
+        <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+
+    </head>
+    <body onscroll="scrolling()" onkeydown="arrowDownPressedHandler()" onload="loadScrollToTop()">
+        <div id="mainContainer">
+            <!-- Top bar with logo and button -->
+            <div class="topBar">
+                <div class="topBarContent">
+                    <div class="logoContainer">
+                        <img src="img/logo.svg" alt="Hudle" class="logoImage">
+                    </div>
+                    <button class="tryItFreeButton">
+                        Try It Free
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scroll to top button in bottom-right corner of screen -->
+            <div class="scrollToTopButton" id="scrollToTopButton" onClick="clickScrollToTop()">
+                <ion-icon name="arrow-dropup" class="upArrow"></ion-icon>
+            </div>
+
+            <!-- Pagination indicators -->
+            <ul id="paginationContainer">
+
+            </ul>
+
+            <div class="section" id="section1">
+                <div class="sectionContent">
+                    <div class="sectionText">
+                        <h1>Build The Community Your Fans Will Love</h1>
+                        <div class="plainText">
+                            Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
+                        </div>
+                        <div>
+                            <button class="pinkButton">
+                                Get Started For Free
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <img
+                            src="img/screen-mockups.svg"
+                            alt="Your community will look amazing on all devices!"
+                            class="fullWideImage"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section2">
+                <div class="sectionContent">
+                    <div class="bigNumber">
+                        <img
+                            src="img/icon-communities.svg"
+                            alt="1.4k+ great communities created"
+                            class="topLeftSmallIcon"
+                        >
+                        <div>
+                            <h1>1.4k+</h1>
+                            <div class="grayComment">Communities Formed</div>
+                        </div>
+                    </div>
+                    <div class="bigNumber">
+                        <img
+                            src="img/icon-messages.svg"
+                            alt="2.7m+ messages sent"
+                            class="topLeftSmallIcon"
+                        >
+                        <h1>2.7m+</h1>
+                        <div class="grayComment">Messages Sent</div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="section waveSection" id="section3">
+                <div class="sectionContent">
+                    <div class="topCyanBackground"></div>
+                    <div class="imageContainer">
+                        <img
+                            src="img/illustration-grow-together.svg"
+                            alt="Grow Together faster"
+                            class="fullWideImage"
+                        >
+                    </div>
+                    <div class="wavesText">
+                        <h2>Grow Together</h2>
+                        <div class="wavesPlainText">
+                        Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out with a feedback form.
+                        </div>
+                    </div>
+                    <div class="bottomCyanBackground"></div>
+                </div>
+            </div>
+            <div class="section waveSection" id="section4">
+                <div class="sectionContent">
+                    <div class="topCyanBackground"></div>
+                    <div class="imageContainer">
+                        <img
+                            src="img/illustration-flowing-conversation.svg"
+                            alt="Flowing conversations"
+                            class="fullWideImage"
+                        >
+                    </div>
+                    <div class="wavesText">
+                        <h2>Flowing conversations</h2>
+                        <div class="wavesPlainText">
+                        You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.
+                        </div>
+                    </div>
+                        <div class="bottomCyanBackground"></div>
+                    </div>
+            </div>
+            <div class="section waveSection" id="section5">
+                <div class="sectionContent">
+                    <div class="topCyanBackground"></div>
+                    <div class="imageContainer">
+                        <img
+                            src="img/illustration-your-users.svg"
+                            alt="Flowing conversations"
+                            class="fullWideImage"
+                        >
+                    </div>
+                    <div class="wavesText">
+                        <h2>Your Users</h2>
+                        <div class="wavesPlainText">
+                        It takes no time at all to integrate Huddle with your app's authentication solution. This means, once sign in to your app, you users can start chatting immediately.
+                        </div>
+                    </div>
+                        <div class="bottomCyanBackground"></div>
+                    </div>
+            </div>
+
+            <div class="section" id="section6">
+                <div class="sectionContent">
+                    <div>
+                        <h1>Ready To Build Your Community?</h1>
+                    </div>
+                    <div>
+                        <button class="pinkButton">Get Started For Free</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section waveSection" id="section7">
+                <div class="sectionContent">
+                    <div class="topCyanBackground topDarkBackground"></div>
+                    <div class="footerText">
+                        <div class="newsletterContainer">
+                            <h2 class="newsletterHeader">Newsletter</h2>
+                            <div>
+                            To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass your email address.
+                            </div>
+                            <form action="POST">
+                                <input
+                                    type="email"
+                                    class="emailInput"
+                                />
+                                <input
+                                    type="button"
+                                    value="Subscribe"
+                                    class="pinkButton subscribeButton"
+                                />
+                            </form>
+                        </div>
+                        <div class="contactContainer">
+                            <img src="../img/logo.svg" alt="" class="footerLogo"><br/>
+                            Lorem ipsum dolor sit amet, consecteur adipiscing elit. Mauris nulla quam, henderit lacina vestibulum a, ultirices quis sem.
+                            <div class="contactData">
+                                <div>
+                                    <img src="../img/icon-phone.svg" alt="Call us" class="contactIcon">
+                                </div>
+                                <div>Phone: +1-543-123-4567</div>
+                                <div>
+                                    <img src="../img/icon-email.svg" alt="Call us" class="contactIcon">
+                                </div>
+                                <div>example@company.com</div>
+
+                            </div>
+                            <div class="socialIconsContainer">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            //Global data
+            const quantityOfSections = 7;
+            let currentSection = 1;
+            let previousSection = 1;
+            // Scroll to top button
+            const scrollButton = document.getElementById('scrollToTopButton');
+            const scrolling = () => {
+                if(window.pageYOffset < 1) {
+                    scrollButton.classList.remove('showButtonAnimation');
+                } else {
+                    scrollButton.classList.add('showButtonAnimation');
+                }
+            };
+
+            const clickScrollToTop = () => {
+                scrollToPoint(currentSection-1);
+            };
+
+            // const loadScrollToTop =() => {
+            //     window.scrollTo({top: 0, behavior: 'smooth'});
+            //     currentSection = 1;
+            // }
+
+            // Pagination effect
+            const mainContainer = document.getElementById('mainContainer');
+
+            const scrollToPoint = (scrollingDirection) => {
+                if
+                    (currentSection > scrollingDirection &&
+                    currentSection - scrollingDirection < quantityOfSections+1) {
+                    currentSection = currentSection - scrollingDirection;
+                }
+
+                let currentPaginator =
+                    document.getElementById('paginator'+currentSection);
+
+                let previousPaginator =
+                    document.getElementById('paginator'+(currentSection+scrollingDirection));
+
+                currentPaginator.classList.add('activePaginator');
+                previousPaginator.classList.remove('activePaginator');
+                document.getElementById('section'+currentSection).scrollIntoView({behavior: 'smooth'});
+            }
+
+
+            const MouseWheelHandler = () => {
+                const scrollingDirection = window.event.wheelDelta > 0 ? 1 : -1;
+                scrollToPoint(scrollingDirection)
+
+            };
+            mainContainer.addEventListener("mousewheel", MouseWheelHandler, false);
+
+            //Arrow Down pressed
+            const arrowDownPressedHandler = () => {
+                if(event.keyCode === 40) {
+                    scrollToPoint(-1)
+                } else if(event.keyCode === 38) {
+                    scrollToPoint(-1)
+                }
+            }
+
+            //Paginations symbols on right side of the screen
+            let n=1;
+            while(n<=quantityOfSections) {
+                    let newLi = document.createElement('li');
+                    newLi.setAttribute('id', 'paginator'+n);
+                    n===1 ? newLi.classList.add('activePaginator') : null;
+                    document.getElementById('paginationContainer').
+                        appendChild(
+                            newLi
+                        );
+
+                    n=n+1;
+                }
+
+        </script>
+    </body>
+</html>
