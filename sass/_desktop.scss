@@ -1,0 +1,235 @@
+
+body {
+    background-color: #555;
+    overflow: hidden;
+}
+
+#mainContainer {
+    max-width: var(--width-desktop);
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 30px 50px rgba(0,0,0,.5);
+}
+
+div, * {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.topBar {
+    height: 80px;
+    max-width: var(--width-desktop);
+    background-color: transparent;
+}
+
+.logoImage {
+    height: 30px;
+}
+
+.tryItFreeButton {
+    height: 36px;
+    font-size: 16px;
+    padding: 5px 20px;
+}
+
+.topBarContent {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#paginationContainer {
+    position: fixed;
+    right: 10px;
+    top: 40%;
+    li {
+        width: 16px;
+        height: 16px;
+        background-color: white;
+        border-radius: 50%;
+        border: 3px solid var(--color-pink);
+        margin: 10px;
+        opacity: .3;
+    }
+    li.activePaginator {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    #paginationContainer, .scrollToTopButton {
+        right: calc((100% - 1440px) / 2 + 20px);
+    }
+}
+
+.scrollToTopButton {
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.sectionContent {
+    width: 100%;
+    max-width: var(--width-desktop);
+    grid-template-rows: 50% 50%;
+}
+
+.sectionText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+}
+
+.wavesText {
+    width: 70%;
+}
+
+.wavesText h2 {
+    width: 100%;
+    text-align: left;
+}
+
+.wavesPlainText {
+    text-align: left;
+    font-size: 20px;
+}
+
+.plainText {
+    max-width: 550px;
+    margin: 0 auto 5% auto;
+}
+
+.pinkButton {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 100px;
+}
+
+.fullWideImage {
+    width: auto;
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.waveSection .sectionContent {
+    grid-template-rows: 22% 56% 22%;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+}
+
+.topCyanBackground, .bottomCyanBackground {
+    grid-column: 1/3;
+    width: 100%;
+}
+
+.topCyanBackground {
+    order: 0;
+}
+
+.wavesText {
+    order: 2;
+}
+
+.imageContainer {
+    padding: 5%;
+    order: 3;
+}
+
+.bottomCyanBackground {
+    order: 10;
+}
+
+#section2 {
+    height: 40vh;
+    h1 {
+        font-size: 80px;
+    }
+    .sectionContent {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: none;
+    }
+    .topLeftSmallIcon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+#section3 {
+    height: 60vh;
+    .topCyanBackground {
+        background-image: url('../img/bg-section-top-desktop-1.svg');
+    }
+    .bottomCyanBackground {
+        background-image: url('../img/bg-section-bottom-desktop-1.svg');
+    }
+}
+
+#section4 {
+    height: 75vh;
+    background-color: white;
+    .imageContainer {
+        order: 1;
+    }
+
+}
+
+#section5 {
+    height: 75vh;
+    .topCyanBackground {
+        background-image: url('../img/bg-section-top-desktop-2.svg');
+    }
+    .bottomCyanBackground {
+        background-image: url('../img/bg-section-bottom-desktop-2.svg');
+    }
+    .sectionContent {
+        grid-template-rows: 22% 56% 22%;
+    }
+
+}
+
+#section7 {
+    height: 60vh;
+    .sectionContent {
+        grid-template-columns: none;
+        grid-template-rows: 20% auto;
+    }
+    .sectionContent .footerText{
+        display: grid;
+        width: 90%;
+        grid-template-columns: 30% 50%;
+        grid-column-gap: 20%;
+    }
+    .newsletterContainer {
+        order: 2;
+    }
+    .newsletterContainer div {
+        width: 70%;
+    }
+    .emailInput {
+        width: 63%;
+        height: 60px;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 7px;
+        float: left;
+    }
+
+    .subscribeButton {
+        width: 32%;
+        height: 60px;
+        margin: 1rem 0;
+        border-radius: 7px;
+        font-weight: 700;
+        padding: 1rem;
+        float: right;
+    }
+}

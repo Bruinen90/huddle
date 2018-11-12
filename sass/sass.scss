@@ -1,0 +1,208 @@
+@import 'variables';
+@import 'global';
+
+.topBar {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.topBarContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logoImage {
+    height: 16px;
+}
+
+.tryItFreeButton {
+    height: 25px;
+    padding: 3px 10px;
+    font-size: 12px;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid var(--color-pink);
+    color: var(--color-pink);
+}
+
+.scrollToTopButton {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 3px 7px rgba(0,0,0,.3);
+    opacity: 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.showButtonAnimation {
+    opacity: 1;
+    transition: all 2s;
+    animation: pulse .3s linear 2 alternate;
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.5)
+    }
+}
+
+
+.upArrow {
+    color: white;
+    font-size: 30px;
+}
+
+#section2 {
+    h1 {
+        font-size: 60px;
+        margin: 0;
+    }
+    .sectionContent {
+        grid-template-rows: 50% 50%;
+    }
+    .grayComment {
+        color: #aaa;
+    }
+
+    .bigNumber {
+        align-self: center;
+        place-self: center;
+        width: 200px;
+    }
+
+    .topLeftSmallIcon {
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin-left: 16px;
+    }
+}
+
+#section3 {
+    background-color: var(--color-pale-blue);
+    .topCyanBackground {
+        background-image:
+            url('../img/bg-section-top-mobile-1.svg');
+    }
+    .bottomCyanBackground {
+                background-image:
+                    url('../img/bg-section-bottom-mobile-1.svg')
+    }
+}
+
+#section5 {
+    background-color: var(--color-pale-blue);
+    .sectionContent{
+        grid-template-rows: 15% 35% 30% 20%;
+    }
+    .topCyanBackground {
+        background-image: url('../img/bg-section-top-mobile-2.svg');
+    }
+    .bottomCyanBackground {
+        background-image: url('../img/bg-section-bottom-mobile-2.svg')
+    }
+
+}
+
+
+#section6 {
+    height: 40vh;
+    .sectionContent {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+}
+
+#section7 {
+    background-color: var(--color-dark-cyan);
+    .sectionContent {
+        height: 100%;
+        grid-template-rows: 50px auto;
+        color: white;
+        justify-items: center;
+    }
+    div {
+        color: inherit;
+    }
+    .topDarkBackground {
+        background-image: url('../img/bg-footer-top-mobile.svg');
+    }
+    .footerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80%;
+        text-align: left;
+    }
+    .footerText div {
+        text-align: inherit;
+    }
+    .footerLogo {
+        filter: brightness(1000%) contrast(1000%);
+        width: 70%;
+        margin: 1rem 0;
+    }
+    .emailInput {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+        height: 3rem;
+        border-radius: 7px;
+    }
+    .subscribeButton {
+        border-radius: 7px;
+        font-weight: 700;
+        margin-left: auto;
+        float: right;
+    }
+    .contactData {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 40% 40%;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        margin: 2rem 0;
+    }
+
+    .contactIcon {
+        width: auto;
+        height: 15px;
+    }
+    .socialIconsContainer .hydrated {
+        color: white;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    .newsletterContainer {
+        margin: 2rem 0;
+    }
+    .newsletterHeader {
+        color: inherit;
+        text-transform: uppercase;
+        text-align: inherit;
+    }
+    .contactContainer {
+        height: 300px
+    }
+}
+
+@media (min-width: 768px) {
+    @import 'desktop';
+}
