@@ -70,7 +70,7 @@
     top: -1000px;
     left: 0;
     right: 0;
-    margin: -350px auto;
+    margin: -300px auto;
     width: 600px;
     height: 600px;
     background-color: var(--color-pale-blue);
@@ -78,7 +78,10 @@
     border-radius: 20px;
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 50;
-    display: none;
+
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 30px;
     input {
         border: 1px solid #ccc;
         border-left: 0;
