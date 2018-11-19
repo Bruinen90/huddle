@@ -13,9 +13,44 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700" rel="stylesheet">
         <!-- Ionic Icons -->
         <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
-
+        <script src="js/reload.js" defer></script>
     </head>
-    <body onscroll="scrolling()" onkeydown="arrowDownPressedHandler()" onload="loadScrollToTop()">
+    <body onscroll="scrolling()" onkeydown="arrowDownPressedHandler()">
+        <div id="popup" class="popup">
+            <img src="img/logo.svg" alt="">
+            <h3>Sign up for 30-days free trial!</h3>
+            <form action="POST">
+                <div class="formGrid">
+                    <div class="iconContainer">
+                        <ion-icon name="person" class="icon"></ion-icon>
+                    </div>
+                    <input type="text" class="signupInput" placeholder="Username" required/>
+                    <div class="iconContainer">
+                        <ion-icon name="key" class="icon"></ion-icon>
+                    </div>
+                    <input type="password" class="signupInput" placeholder="Password" required/>
+                    <div class="iconContainer">
+                        <ion-icon name="mail" class="icon"></ion-icon>
+                    </div>
+                    <input type="email" class="signupInput" placeholder="Email" required/>
+                </div>
+
+                <div>
+                    <label class="termsLabel">
+                        I agree to the <a href="/terms.html">Terms of service</a> and <a href="/privacypolicy.html">Privacy Policy</a>
+                        <input type="checkbox" id="termsCheckbox" required />
+                        <span class="checkbox"></span>
+                    </label>
+                </div>
+
+                <button class="pinkButton popupButton">
+                    Try it for free
+                </button>
+            </form>
+        </div>
+
+        <div id="cover" class="cover" onClick="togglePopupHandler(false)"></div>
+
         <div id="mainContainer">
             <!-- Top bar with logo and button -->
             <div class="topBar">
@@ -23,7 +58,7 @@
                     <div class="logoContainer">
                         <img src="img/logo.svg" alt="Hudle" class="logoImage">
                     </div>
-                    <button class="tryItFreeButton">
+                    <button class="tryItFreeButton" onClick="togglePopupHandler(true)">
                         Try It Free
                     </button>
                 </div>
@@ -47,7 +82,7 @@
                             Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
                         </div>
                         <div>
-                            <button class="pinkButton">
+                            <button class="pinkButton" onClick="togglePopupHandler(true)">
                                 Get Started For Free
                             </button>
                         </div>
@@ -152,7 +187,7 @@
                         <h1>Ready To Build Your Community?</h1>
                     </div>
                     <div>
-                        <button class="pinkButton">Get Started For Free</button>
+                        <button class="pinkButton" onClick="togglePopupHandler(true)">Get Started For Free</button>
                     </div>
                 </div>
             </div>
@@ -219,6 +254,7 @@
             const quantityOfSections = 7;
             let currentSection = 1;
             let previousSection = 1;
+            let showPopUp = false;
             // Scroll to top button
             const scrollButton = document.getElementById('scrollToTopButton');
             const scrolling = () => {
@@ -233,10 +269,8 @@
                 scrollToPoint(currentSection-1);
             };
 
-            const loadScrollToTop =() => {
-                window.scrollTo({top: 0, behavior: 'smooth'});
-                currentSection = 1;
-            }
+            //Scrolling to top on load/refresh
+            window.onbeforeunload = () => window.scrollTo(0, 0);
 
             // Pagination effect
             const mainContainer = document.getElementById('mainContainer');
@@ -281,6 +315,7 @@
             while(n<=quantityOfSections) {
                     let newLi = document.createElement('li');
                     newLi.setAttribute('id', 'paginator'+n);
+                    newLi.setAttribute('onClick', `scrollToPoint(currentSection-${n})`);
                     n===1 ? newLi.classList.add('activePaginator') : null;
                     document.getElementById('paginationContainer').
                         appendChild(
@@ -289,6 +324,19 @@
 
                     n=n+1;
                 }
+
+            //Toggle popup
+            const togglePopupHandler = (show=showPopUp) => {
+                const cover = document.getElementById('cover');
+                const popUp = document.getElementById('popup');
+                if(show) {
+                    cover.classList.add('showCover');
+                    popUp.classList.add('showPopup');
+                } else {
+                    cover.classList.remove('showCover');
+                    popUp.classList.remove('showPopup');
+                }
+            }
 
         </script>
     </body>
