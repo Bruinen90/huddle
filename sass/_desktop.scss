@@ -77,7 +77,7 @@ h2 {
 .sectionContent {
     width: 100%;
     max-width: var(--width-desktop);
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr 1fr;
 }
 
 .sectionText {
@@ -121,7 +121,7 @@ h2 {
 
 .waveSection .sectionContent {
     grid-template-rows: 22% 56% 22%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
