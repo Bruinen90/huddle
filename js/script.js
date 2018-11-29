@@ -80,3 +80,22 @@ const togglePopupHandler = () => {
     cover.classList.toggle('showCover');
     popUp.classList.toggle('showPopup');
 }
+
+//Change color of logoImage
+document.querySelectorAll('.footerLogo').forEach(function(img){
+    let imgClass = img.className;
+    let imgURL = img.src;
+    fetch(imgURL).then(function(response) {
+        return response.text();
+    }).then(function(text){
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(text, "text/xml");
+        let svg = xmlDoc.getElementsByTagName('svg')[0];
+        if(typeof imgClass !== 'undefined') {
+            svg.setAttribute('class', imgClass);
+        }
+        img.parentNode.replaceChild(svg, img);
+
+    });
+
+});

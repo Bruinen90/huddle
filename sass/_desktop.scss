@@ -119,6 +119,12 @@ h2 {
     max-height: 90%;
 }
 
+@supports (-ms-ime-align:auto) {
+    .fullWideImage {
+      max-height: 35vh;
+    }
+}
+
 .waveSection .sectionContent {
     grid-template-rows: 22% 56% 22%;
     grid-template-columns: 1fr 1fr;

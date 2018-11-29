@@ -103,6 +103,7 @@
         }
 
         .iconContainer {
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -164,8 +165,9 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,.7);
-    transition: all 1s;
+    transition: all .5s;
     opacity: 0;
+    z-index: -100;
 }
 
 .showCover {
@@ -186,14 +188,14 @@
     }
     .sectionContent {
         grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
     }
     .grayComment {
         color: #aaa;
     }
 
     .bigNumber {
-        align-self: center;
-        place-self: center;
         width: 200px;
     }
 
@@ -267,10 +269,12 @@
     .footerText div {
         text-align: inherit;
     }
-    .footerLogo {
-        filter: brightness(1000%) contrast(1000%);
+    .footerLogo{
         width: 70%;
         margin: 1rem 0;
+        path{
+            fill: #fff;
+        }
     }
     .emailInput {
         width: 100%;

@@ -8,7 +8,6 @@
 
 div, * {
   font-size: 14px;
-  color: var(--color-dark-cyan);
   font-family: "Open Sans", sans-serif;
   text-align: center;
   line-height: 1.5;
@@ -49,6 +48,7 @@ input {
 }
 
 a {
+  color: var(--color-dark-cyan);
   text-decoration: none;
   border-bottom: 3px solid var(--color-pink);
   background-image: linear-gradient(to bottom, transparent 0, var(--color-pink) 0);
@@ -231,6 +231,7 @@ a:hover {
   font-size: 20px;
 }
 .popup .formGrid .iconContainer {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,8 +291,9 @@ a:hover {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
-  transition: all 1s;
+  transition: all 0.5s;
   opacity: 0;
+  z-index: -100;
 }
 
 .showCover {
@@ -309,13 +311,13 @@ a:hover {
 }
 #section2 .sectionContent {
   grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 }
 #section2 .grayComment {
   color: #aaa;
 }
 #section2 .bigNumber {
-  align-self: center;
-  place-self: center;
   width: 200px;
 }
 #section2 .topLeftSmallIcon {
@@ -385,9 +387,11 @@ a:hover {
   text-align: inherit;
 }
 #section7 .footerLogo {
-  filter: brightness(1000%) contrast(1000%);
   width: 70%;
   margin: 1rem 0;
+}
+#section7 .footerLogo path {
+  fill: #fff;
 }
 #section7 .emailInput {
   width: 100%;
@@ -559,6 +563,13 @@ a:hover {
     width: auto;
     max-width: 100%;
     max-height: 90%;
+  }
+}
+@media (min-width: 768px) {
+  @supports (-ms-ime-align: auto) {
+    .fullWideImage {
+      max-height: 35vh;
+    }
   }
 }
 @media (min-width: 768px) {

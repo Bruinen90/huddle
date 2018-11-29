@@ -1,6 +1,5 @@
 div, * {
     font-size: 14px;
-    color: var(--color-dark-cyan);
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     line-height: 1.5;
@@ -41,6 +40,7 @@ input {
 }
 
 a {
+    color: var(--color-dark-cyan);
     text-decoration: none;
     border-bottom: 3px solid var(--color-pink);
     background-image: linear-gradient(to bottom,transparent 0,var(--color-pink) 0);
